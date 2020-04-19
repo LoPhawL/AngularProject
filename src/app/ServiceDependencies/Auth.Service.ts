@@ -100,7 +100,7 @@ export class Auth
       if(!userDetails)
         {return;}
       const userRep:{id:string,email:string,_token:string,_expiresBy:string,_refreshToken:string,renewalCount:number} = JSON.parse(userDetails);
-      console.log(new Date(userRep._expiresBy).getTime() - new Date().getTime() );
+      // console.log(new Date(userRep._expiresBy).getTime() - new Date().getTime() );
 
       if( new Date() > new Date(userRep._expiresBy))
       // if( new Date(userRep._expiresBy).getTime() - new Date().getTime() < 3590000)
